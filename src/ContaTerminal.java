@@ -15,9 +15,22 @@ public class ContaTerminal {
         this.nomecliente=nomecliente;
         this.saldo=saldo;
     }
+    
+    
 
 
-    public int getNumero(){
+    @Override
+	public String toString() {
+		return "Olá "+ nomecliente +" "
+				+ ", obrigado por criar uma conta em nosso banco, "
+				+ "sua agência é "+ agencia 
+				+ ", conta  " + numero 
+				+ " e o seu saldo "+ saldo+" "
+				+ "já esta disponível para saque.";
+	}
+    
+
+	public int getNumero(){
         return numero;
     }
 
@@ -51,5 +64,7 @@ public class ContaTerminal {
         this.saldo=saldo;
 
     }
+    
+    
 
-    }
+}
