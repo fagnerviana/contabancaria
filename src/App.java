@@ -8,6 +8,7 @@ public class App {
         ContaTerminal conta = new ContaTerminal();
         Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
         int opcao;
+        CaixaEletronico caixaeltronico = new CaixaEletronico();
                 
         
         
@@ -17,6 +18,8 @@ public class App {
             System.out.println("Escolha a opção desejada");
             System.out.println("Digite o numero para cada opção");
             System.out.println(" 1 - Cadastrar novo cliente");
+            System.out.println(" 2 - Depositar Valor");
+            System.out.println(" 3 - Pesquisar Cliente");
             System.out.println(" 0 - Sair");
 
             opcao = scanner.nextInt();
@@ -37,8 +40,19 @@ public class App {
             float saldoconta = scanner.nextFloat();
             conta.setSaldo(saldoconta);
             System.out.println(conta);
+            break;
+            
+            case 2:
+            	System.out.println("Por favor, digite o valor a ser depositado");
+                int valordepositar =scanner.nextInt();
+                scanner.nextLine();
+                caixaeltronico.depositar(valordepositar);
             
             break;
+            
+            case 3:
+            	System.out.println(conta);
+            	break;
 
             default:
             	if(opcao!=0) {

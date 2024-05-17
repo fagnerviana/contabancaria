@@ -14,11 +14,8 @@ public class ContaTerminal {
         this.agencia=agencia;
         this.nomecliente=nomecliente;
         this.saldo=saldo;
-    }
+    }    
     
-    
-
-
     @Override
 	public String toString() {
 		return "Olá "+ nomecliente +" "
@@ -61,7 +58,7 @@ public class ContaTerminal {
     }
 
     public void setSaldo(float saldo){
-        this.saldo=saldo;
+        this.saldo+=saldo;
 
     }
     
